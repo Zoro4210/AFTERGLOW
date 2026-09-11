@@ -350,7 +350,7 @@ button {
 }
 
 .display-title {
-  margin: 0;
+  margin: 0 0 4.75rem;
   font-size: clamp(4.4rem, 13.2vw, 13rem);
   font-weight: 900;
   line-height: 0.72;
@@ -370,16 +370,37 @@ button {
   margin-left: 6vw;
 }
 
+.display-title .title-last-line {
+  position: relative;
+  width: max-content;
+}
+
 .title-dot {
   display: inline !important;
   color: var(--acid);
+}
+
+.hero-motion {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 1rem);
+  width: max-content;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.07em;
+  text-align: left;
+  text-transform: uppercase;
+  transform: translateY(-50%);
 }
 
 .hero-actions {
   display: flex;
   gap: 0.65rem;
   justify-content: flex-end;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
 .button {
@@ -728,14 +749,39 @@ button {
 }
 
 .gallery-quote {
-  align-self: center;
-  margin: 0;
-  padding: 2rem 1rem;
-  border-block: 1px solid var(--line-dark);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  min-height: 44rem;
+  margin: 6rem 0 0;
+  padding: clamp(2rem, 3vw, 3rem);
+  color: var(--paper);
+  border-radius: var(--radius);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.gallery-quote::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.32) 38%, rgba(0, 0, 0, 0.72) 100%);
+}
+
+.gallery-quote-media {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 !important;
 }
 
 .gallery-quote p {
-  margin: 0 0 2rem;
+  margin: auto 0 2rem;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.6rem, 3vw, 3rem);
   font-style: italic;
@@ -744,6 +790,7 @@ button {
 }
 
 .gallery-quote span {
+  color: rgba(241, 238, 228, 0.8);
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.09em;
@@ -1113,11 +1160,13 @@ button {
 
   .gallery-quote {
     align-self: start;
+    min-height: 36rem;
+    margin-top: 5rem;
   }
 
   .gallery-tall {
     grid-column: 2;
-    margin-top: -10rem !important;
+    margin-top: 2rem !important;
   }
 
   .gallery-tall img {
@@ -1134,11 +1183,8 @@ button {
     object-position: 52% center;
   }
 
-  .hero-topline p:last-child {
-    display: none;
-  }
-
   .display-title {
+    margin-bottom: 4.25rem;
     font-size: clamp(4.1rem, 23vw, 7rem);
     line-height: 0.77;
   }
@@ -1149,6 +1195,15 @@ button {
 
   .display-title span:nth-child(3) {
     margin-left: 9vw;
+  }
+
+  .hero-motion {
+    top: calc(100% + 0.85rem);
+    right: 0.3em;
+    left: auto;
+    font-size: 0.68rem;
+    text-align: right;
+    transform: none;
   }
 
   .hero-actions {
@@ -1215,6 +1270,7 @@ button {
   }
 
   .gallery-quote {
+    min-height: 34rem;
     margin-block: 2rem;
   }
 
