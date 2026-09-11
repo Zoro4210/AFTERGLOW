@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AFTERGLOW is a late-night room for music, movement, and beautifully mixed drinks."
+    />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>AFTERGLOW — Music after dark</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="AFTERGLOW home">
+        <span class="brand-name">Afterglow</span>
+      </a>
+
+      <div class="header-controls">
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="#lineup">Lineup</a>
+          <a href="#room">The room</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#visit">Visit</a>
+          <button class="nav-cta" type="button" data-open-guest-list>Guest list</button>
+        </nav>
+
+        <button
+          class="music-toggle"
+          type="button"
+          data-music-toggle
+          aria-label="Play background music"
+          aria-pressed="false"
+        >
+          <span class="music-waveform" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i>
+          </span>
+        </button>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span>Menu</span>
+          <i aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <audio
+      data-background-audio
+      src="/assets/audio/feet-dont-touch.mp3"
+      preload="metadata"
+      loop
+      hidden
+    ></audio>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <img
+          class="hero-media"
+          src="/assets/club-motion.jpg"
+          alt="Guests sharing drinks in a red-lit club"
+          width="736"
+          height="920"
+        />
+        <div class="hero-wash" aria-hidden="true"></div>
+
+        <div class="hero-topline reveal">
+          <p>A listening bar<br />after dark</p>
+          <p>Music · Drinks · Motion<br />Downtown</p>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Every weekend · from 10 PM</p>
+          <h1 id="hero-title" class="display-title reveal">
+            <span>LOSE</span>
+            <span>TRACK OF</span>
+            <span>TIME<span class="title-dot">.</span></span>
+          </h1>
+          <div class="hero-actions reveal">
+            <a class="button button-light" href="#lineup">See this week</a>
+            <button class="button button-ghost" type="button" data-open-guest-list>
+              Join guest list
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="ticker" aria-label="Venue highlights">
+        <div class="ticker-track">
+          <span>NO REQUESTS</span><i>✦</i><span>JUST GOOD MUSIC</span><i>✦</i>
+          <span>SMALL ROOM</span><i>✦</i><span>BIG ENERGY</span><i>✦</i>
+          <span aria-hidden="true">NO REQUESTS</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">JUST GOOD MUSIC</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">SMALL ROOM</span><i aria-hidden="true">✦</i>
+          <span aria-hidden="true">BIG ENERGY</span><i aria-hidden="true">✦</i>
+        </div>
+      </div>
+
+      <section class="lineup section-light" id="lineup" aria-labelledby="lineup-title">
+        <div class="section-heading reveal">
+          <p class="section-index">01 / THIS WEEK</p>
+          <h2 id="lineup-title">Three nights.<br />One pulse.</h2>
+          <p class="section-intro">
+            House selectors, live percussion, and a room designed to move with them.
+          </p>
+        </div>
+
+        <div class="event-list">
+          <article class="event-row reveal">
+            <div class="event-date"><strong>17</strong><span>SEP · THU</span></div>
+            <div class="event-name">
+              <p>Opening frequency</p>
+              <h3>MIRA SOL<br /><span>+ FRIENDS</span></h3>
+            </div>
+            <div class="event-meta"><span>Deep house · vinyl</span><span>22:00—02:00</span></div>
+            <button class="round-button" type="button" data-event="Mira Sol + Friends" aria-label="Join the guest list for Mira Sol and Friends">↗</button>
+          </article>
+
+          <article class="event-row reveal">
+            <div class="event-date"><strong>18</strong><span>SEP · FRI</span></div>
+            <div class="event-name">
+              <p>All night session</p>
+              <h3>LUCA VANE<br /><span>B2B NOOR</span></h3>
+            </div>
+            <div class="event-meta"><span>Disco · house</span><span>22:00—LATE</span></div>
+            <button class="round-button" type="button" data-event="Luca Vane b2b Noor" aria-label="Join the guest list for Luca Vane and Noor">↗</button>
+          </article>
+
+          <article class="event-row reveal">
+            <div class="event-date"><strong>19</strong><span>SEP · SAT</span></div>
+            <div class="event-name">
+              <p>Afterglow ritual</p>
+              <h3>AMARA LIVE<br /><span>THEO K</span></h3>
+            </div>
+            <div class="event-meta"><span>Afro house · live percussion</span><span>21:30—LATE</span></div>
+            <button class="round-button" type="button" data-event="Amara Live + Theo K" aria-label="Join the guest list for Amara Live and Theo K">↗</button>
+          </article>
+        </div>
+
+      </section>
+
+      <section class="room section-dark" id="room" aria-labelledby="room-title">
+        <div class="room-stage">
+          <div class="room-copy reveal">
+            <p class="section-index">02 / THE ROOM</p>
+            <h2 id="room-title">Made for the hours after midnight.</h2>
+          </div>
+
+          <div class="room-visual reveal">
+            <img
+              src="/assets/confetti-dancefloor.jpg"
+              alt="A packed dance floor celebrating beneath falling confetti"
+              width="736"
+              height="1104"
+              loading="lazy"
+            />
+            <p class="image-caption">Peak hour / somewhere between the first drop and sunrise</p>
+          </div>
+        </div>
+
+        <div class="room-details" data-highlight-grid>
+          <div class="room-highlight" data-room-highlight aria-hidden="true"></div>
+          <article
+            class="detail-card reveal is-active"
+            data-highlight-color="#d94527"
+            style="--card-active-ink: #f1eee4; --card-active-copy: rgba(241, 238, 228, 0.82)"
+          >
+            <h3>Sound</h3>
+            <p>A close, full-range system tuned for long sets and low-end detail.</p>
+          </article>
+          <article
+            class="detail-card reveal"
+            data-highlight-color="#275ee8"
+            style="--card-active-ink: #f1eee4; --card-active-copy: rgba(241, 238, 228, 0.82)"
+          >
+            <h3>Pour</h3>
+            <p>Classics with sharper edges, midnight spritzes, and zero-proof options.</p>
+          </article>
+          <article
+            class="detail-card reveal"
+            data-highlight-color="#c7ff45"
+            style="--card-active-ink: #090909; --card-active-copy: rgba(9, 9, 9, 0.72)"
+          >
+            <h3>Energy</h3>
+            <p>Intimate enough to disappear. Alive enough to forget the hour.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="gallery section-coral" id="gallery" aria-labelledby="gallery-title">
+        <div class="gallery-heading reveal">
+          <p class="section-index">03 / SEEN INSIDE</p>
+          <h2 id="gallery-title">The night,<br />as it happened.</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-large reveal">
+            <img
+              src="/assets/dj-crowd.jpg"
+              alt="DJ playing for a lively crowd beneath mirror balls"
+              width="640"
+              height="800"
+              loading="lazy"
+            />
+            <figcaption>Close to the booth</figcaption>
+          </figure>
+
+          <blockquote class="gallery-quote reveal">
+            <p>“The best nights feel a little out of focus.”</p>
+            <span>House rule #04</span>
+          </blockquote>
+
+          <figure class="gallery-tall reveal">
+            <img
+              src="/assets/gallery-afterglow-generated.png"
+              alt="Dancers and cocktails caught in red light beside the DJ booth"
+              width="1024"
+              height="1536"
+              loading="lazy"
+            />
+            <figcaption>One more round</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="visit section-dark" id="visit" aria-labelledby="visit-title">
+        <div class="visit-heading reveal">
+          <p class="section-index">04 / FIND THE GLOW</p>
+          <h2 id="visit-title">Meet us<br />after dark.</h2>
+        </div>
+
+        <div class="visit-grid">
+          <div class="visit-block reveal">
+            <p class="visit-label">Location</p>
+            <p>Downtown<br />Address revealed with reservation</p>
+          </div>
+          <div class="visit-block reveal">
+            <p class="visit-label">Hours</p>
+            <p>Thursday · 22:00—02:00<br />Friday—Saturday · 22:00—late</p>
+          </div>
+          <div class="visit-block reveal">
+            <p class="visit-label">Good to know</p>
+            <p>21+ · Come as you are<br />Respect the room and each other</p>
+          </div>
+        </div>
+
+        <button class="giant-cta reveal" type="button" data-open-guest-list>
+          <span>JOIN THE GUEST LIST</span>
+          <i aria-hidden="true">↗</i>
+        </button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand brand-footer" href="#top" aria-label="AFTERGLOW home">
+        <span class="brand-name">Afterglow</span>
+      </a>
+      <p>© <span data-year></span> AFTERGLOW</p>
+    </footer>
+
+    <dialog class="guest-dialog" data-guest-dialog aria-labelledby="guest-dialog-title">
+      <button class="dialog-close" type="button" data-close-dialog aria-label="Close guest list">×</button>
+      <div class="dialog-copy">
+        <p class="section-index">GUEST LIST</p>
+        <h2 id="guest-dialog-title">Save your place in the room.</h2>
+        <p>Choose a night and tell us who’s coming. This local prototype demonstrates the booking flow.</p>
+      </div>
+
+      <form class="guest-form" data-guest-form>
+        <label>
+          <span>Your name</span>
+          <input name="name" autocomplete="name" required placeholder="Name" />
+        </label>
+        <label>
+          <span>Email</span>
+          <input name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+        </label>
+        <label>
+          <span>Night</span>
+          <select name="event" data-event-select required>
+            <option value="">Choose a night</option>
+            <option>Mira Sol + Friends</option>
+            <option>Luca Vane b2b Noor</option>
+            <option>Amara Live + Theo K</option>
+          </select>
+        </label>
+        <label>
+          <span>Party size</span>
+          <select name="party" required>
+            <option value="">Choose</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+          </select>
+        </label>
+        <button class="button button-submit" type="submit">Request guest list</button>
+        <p class="form-note">No request is sent from this prototype.</p>
+      </form>
+
+      <div class="dialog-success" data-dialog-success hidden>
+        <span aria-hidden="true">✦</span>
+        <h3>You’re on the demo list.</h3>
+        <p>The final site can send this request to your preferred booking or email system.</p>
+        <button class="button button-submit" type="button" data-close-dialog>Done</button>
+      </div>
+    </dialog>
+
+    <script src="/script.js" defer></script>
+  </body>
+</html>
