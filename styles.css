@@ -350,8 +350,8 @@ button {
 }
 
 .display-title {
-  margin: 0 0 4.75rem;
-  font-size: clamp(4.4rem, 13.2vw, 13rem);
+  margin: 0 0 clamp(3rem, 7svh, 4.75rem);
+  font-size: clamp(4.4rem, min(13.2vw, 23svh), 13rem);
   font-weight: 900;
   line-height: 0.72;
   letter-spacing: -0.08em;
